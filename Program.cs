@@ -4,6 +4,8 @@ namespace SnackeLastChance
 {
     class Program
     {
+        FructFactory heart = new FructFactory();
+
         private static bool up;
         private static bool down;
         private static bool right;
@@ -104,7 +106,7 @@ namespace SnackeLastChance
             while (alive)
             {
                 ToMoveSnake();
-                ToCreateTheFruict();
+                FructFactory.ToCreateTheFruict();
                 ToDrawField();
                 ToReadKey();
             }
@@ -171,7 +173,7 @@ namespace SnackeLastChance
                 if (GameSettings.BackGroundField[xHead - 1, yHead] > 0) alive = false;
                 else
                 {
-                    if (ToCheckMaxValue() > counter)
+                    if (ToCheckMaxValue() > GameSettings.Counter)
                     {
                         ToDeleteMaxValue();
                     }
@@ -188,7 +190,7 @@ namespace SnackeLastChance
                 if (GameSettings.BackGroundField[xHead + 1, yHead] > 0) alive = false;
                 else
                 {
-                    if (ToCheckMaxValue() > counter)
+                    if (ToCheckMaxValue() > GameSettings.Counter)
                     {
                         ToDeleteMaxValue();
                     }
@@ -203,7 +205,7 @@ namespace SnackeLastChance
                 if (GameSettings.BackGroundField[xHead, yHead + 1] > 0) alive = false;
                 else
                 {
-                    if (ToCheckMaxValue() > counter)
+                    if (ToCheckMaxValue() > GameSettings.Counter)
                     {
                         ToDeleteMaxValue();
                     }
@@ -217,7 +219,7 @@ namespace SnackeLastChance
                 if (GameSettings.BackGroundField[xHead, yHead - 1] > 0) alive = false;
                 else
                 {
-                    if (ToCheckMaxValue() > counter)
+                    if (ToCheckMaxValue() > GameSettings.Counter)
                     {
                         ToDeleteMaxValue();
                     }

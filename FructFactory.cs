@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SnackeLastChance
 {
-    public class FructFactoru
+
+    public class FructFactory
     {
         public static void ToCreateTheFruict()
         {
@@ -27,7 +26,7 @@ namespace SnackeLastChance
                 int y = rand.Next(1, GameSettings.BackGroundField.GetLength(1) - 1);
 
                 GameSettings.BackGroundField[x, y] = -1;
-                counter++;
+                GameSettings.Counter++;
             }
         }
     }
