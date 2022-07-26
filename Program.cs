@@ -202,7 +202,7 @@ namespace SnackeLastChance
 
             else if (right)
             {
-                if (GameSettings.BackGroundField[xHead, yHead + 1] > 0) alive = false;
+                if (GameSettings.BackGroundField[xHead, yHead + 1] > 0) alive = false;  
                 else
                 {
                     if (ToCheckMaxValue() > GameSettings.Counter)
