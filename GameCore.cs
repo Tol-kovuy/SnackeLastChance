@@ -6,6 +6,7 @@ namespace SnackeLastChance
 {
     public class GameCore
     {
+        FructFactory fructFactory = new FructFactory();
         public void ToStartGame()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -13,12 +14,12 @@ namespace SnackeLastChance
             while (Snake.Alive)
             {
                 Snake.ToMoveSnake();
-                FructFactory.ToCreateTheFruict();
+                fructFactory.ToCreateTheFruict();
                 Teacher.ToDrawBrickInTheWall();
                 ToReadKey();
             }
         }
-        private static void ToReadKey()
+        private void ToReadKey()
         {
             ConsoleKeyInfo input = Console.ReadKey();
 

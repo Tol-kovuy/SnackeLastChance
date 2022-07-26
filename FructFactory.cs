@@ -5,15 +5,17 @@ namespace SnackeLastChance
 
     public class FructFactory
     {
-        public static void ToCreateTheFruict()
+        GameSettings gameSettings = new GameSettings();
+
+        public void ToCreateTheFruict()
         {
             bool appleFaund = false;
 
-            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
+            for (int i = 0; i < gameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
+                for (int j = 0; j < gameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (GameSettings.BackGroundField[i, j] == -1)
+                    if (gameSettings.BackGroundField[i, j] == -1)
                     {
                         appleFaund = true;
                     }
@@ -22,11 +24,11 @@ namespace SnackeLastChance
             if (appleFaund == false)
             {
                 Random rand = new Random();
-                int x = rand.Next(1, GameSettings.BackGroundField.GetLength(0) - 1);
-                int y = rand.Next(1, GameSettings.BackGroundField.GetLength(1) - 1);
+                int x = rand.Next(1, gameSettings.BackGroundField.GetLength(0) - 1);
+                int y = rand.Next(1, gameSettings.BackGroundField.GetLength(1) - 1);
 
-                GameSettings.BackGroundField[x, y] = -1;
-                GameSettings.Counter++;
+                gameSettings.BackGroundField[x, y] = -1;
+                gameSettings.Counter++;
             }
         }
     }

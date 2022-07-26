@@ -4,25 +4,26 @@ namespace SnackeLastChance
 {
     public class Teacher
     {
-        public static void ToDrawBrickInTheWall()
+        GameSettings gameSettings = new GameSettings();
+        public void ToDrawBrickInTheWall()
         {
             Console.Clear();
             Console.CursorVisible = false;
 
-            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
+            for (int i = 0; i < gameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
+                for (int j = 0; j < gameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (GameSettings.BackGroundField[i, j] == 1)
+                    if (gameSettings.BackGroundField[i, j] == 1)
                     {
                         Console.Write("█");
                     }
 
-                    else if (GameSettings.BackGroundField[i, j] >= 2)
+                    else if (gameSettings.BackGroundField[i, j] >= 2)
                     {
                         Console.Write("■");
                     }
-                    else if (GameSettings.BackGroundField[i, j] == -1)
+                    else if (gameSettings.BackGroundField[i, j] == -1)
                     {
                         Console.Write("♥");
                     }
@@ -34,7 +35,7 @@ namespace SnackeLastChance
                 }
                 Console.WriteLine(" ");
             }
-            Console.WriteLine(GameSettings.Counter);
+            Console.WriteLine(gameSettings.Counter);
         }
     }
 }
