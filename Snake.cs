@@ -8,7 +8,7 @@
         private static bool left;
 
 
-        public static bool Alive { get; set; } = true;
+        public static bool Alive { get; set; } = true; 
 
     }
 }
