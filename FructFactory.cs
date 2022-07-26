@@ -2,7 +2,6 @@
 
 namespace SnackeLastChance
 {
-
     public class FructFactory
     {
         public static void ToCreateTheFruict()

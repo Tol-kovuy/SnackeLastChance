@@ -8,7 +8,7 @@
         public static bool Left { get; set; }
         public static bool Alive { get; set; } = true;
 
-        GameSettings GameSettings = new GameSettings();
+        GameSettings GzameSettings = new GameSettings();
 
         public static int ToCheckMaxValue()
         {
