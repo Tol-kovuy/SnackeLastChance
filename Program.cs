@@ -6,7 +6,7 @@ namespace SnackeLastChance
     {
         static void Main()
         {
-            GameCore game = new GameCore();
+            GameCore game = new GameCore(); 
             game.ToStartGame();
         } 
     }
