@@ -190,7 +190,7 @@ namespace SnackeLastChance
                         xHead = i;
                         yHead = j;
                     }
-                }G
+                }
             }
 
             if (up)
@@ -198,19 +198,19 @@ namespace SnackeLastChance
                 if (GameSettings.BackGroundField[xHead - 1, yHead] > 0) alive = false;
                 else
                 {
-                    if(ToCheckMaxValue() > counter)
+                    if (ToCheckMaxValue() > counter)
                     {
-                        ToDeleteMaxValue(); 
+                        ToDeleteMaxValue();
                     }
 
                     ToUpValueBody();
                     GameSettings.BackGroundField[xHead - 1, yHead] = 2;
                 }
-               
+
             }
 
             else if (down)
-            { 
+            {
 
                 if (GameSettings.BackGroundField[xHead + 1, yHead] > 0) alive = false;
                 else
