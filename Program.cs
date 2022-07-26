@@ -6,12 +6,7 @@ namespace SnackeLastChance
     {
         FructFactory heart = new FructFactory();
 
-        private static bool up;
-        private static bool down;
-        private static bool right;
-        private static bool left;
-
-        private static bool alive = true;
+        
 
         
 
@@ -72,7 +67,7 @@ namespace SnackeLastChance
         static void Main()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            while (alive)
+            while (Snake.Alive)
             {
                 ToMoveSnake();
                 FructFactory.ToCreateTheFruict();
