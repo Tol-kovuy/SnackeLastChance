@@ -34,7 +34,7 @@ namespace SnackeLastChance
                 }
                 Console.WriteLine(" ");
             }
-            Console.WriteLine(GameSettings.Counter);
+            Console.WriteLine("                Scope is {0}", GameSettings.Counter);
         }
     }
 }
