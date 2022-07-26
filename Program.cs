@@ -4,28 +4,7 @@ namespace SnackeLastChance
 {
     class Program
     {
-        private static int[,] backGround =
-            {
-            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-};
+        //GameSettings gameSettings = new GameSettings();
 
         private static int counter = 0;
 
@@ -41,20 +20,20 @@ namespace SnackeLastChance
             Console.Clear();
             Console.CursorVisible = false;
 
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] == 1)
+                    if (GameSettings.BackGroundField[i, j] == 1)
                     {
                         Console.Write("█");
                     }
 
-                    else if (backGround[i, j] >= 2)
+                    else if (GameSettings.BackGroundField[i, j] >= 2)
                     {
                         Console.Write("■");
                     }
-                    else if (backGround[i, j] == -1)
+                    else if (GameSettings.BackGroundField[i, j] == -1)
                     {
                         Console.Write("♥");
                     }
@@ -73,11 +52,11 @@ namespace SnackeLastChance
         {
             bool appleFaund = false;
 
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] == -1)
+                    if (GameSettings.BackGroundField[i, j] == -1)
                     {
                         appleFaund = true;
                     }
@@ -86,10 +65,10 @@ namespace SnackeLastChance
             if (appleFaund == false)
             {
                 Random rand = new Random();
-                int x = rand.Next(1, backGround.GetLength(0) - 1);
-                int y = rand.Next(1, backGround.GetLength(1) - 1);
+                int x = rand.Next(1, GameSettings.BackGroundField.GetLength(0) - 1);
+                int y = rand.Next(1, GameSettings.BackGroundField.GetLength(1) - 1);
 
-                backGround[x, y] = -1;
+                GameSettings.BackGroundField[x, y] = -1;
                 counter++;
             }
         }
@@ -98,13 +77,13 @@ namespace SnackeLastChance
         {
             int max = 0;
 
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] > max)
+                    if (GameSettings.BackGroundField[i, j] > max)
                     {
-                        max = backGround[i, j];
+                        max = GameSettings.BackGroundField[i, j];
                     }
                 }
             }
@@ -113,13 +92,13 @@ namespace SnackeLastChance
 
         public static void ToUpValueBody()
         {
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] > 1)
+                    if (GameSettings.BackGroundField[i, j] > 1)
                     {
-                        backGround[i, j]++;
+                        GameSettings.BackGroundField[i, j]++;
                     }
                 }
             }
@@ -130,20 +109,20 @@ namespace SnackeLastChance
             int x = 0;
             int y = 0;
 
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] > max)
+                    if (GameSettings.BackGroundField[i, j] > max)
                     {
-                        max = backGround[i, j];
+                        max = GameSettings.BackGroundField[i, j];
                         x = i;
                         y = j;
                     }
                 }
             }
 
-            backGround[x, y] = 0;
+            GameSettings.BackGroundField[x, y] = 0;
         }
 
         static void Main()
@@ -202,21 +181,21 @@ namespace SnackeLastChance
             int xHead = 0;
             int yHead = 0;
 
-            for (int i = 0; i < backGround.GetLength(0); i++)
+            for (int i = 0; i < GameSettings.BackGroundField.GetLength(0); i++)
             {
-                for (int j = 0; j < backGround.GetLength(1); j++)
+                for (int j = 0; j < GameSettings.BackGroundField.GetLength(1); j++)
                 {
-                    if (backGround[i, j] == 2)
+                    if (GameSettings.BackGroundField[i, j] == 2)
                     {
                         xHead = i;
                         yHead = j;
                     }
-                }
+                }G
             }
 
             if (up)
             {
-                if (backGround[xHead - 1, yHead] > 0) alive = false;
+                if (GameSettings.BackGroundField[xHead - 1, yHead] > 0) alive = false;
                 else
                 {
                     if(ToCheckMaxValue() > counter)
@@ -225,7 +204,7 @@ namespace SnackeLastChance
                     }
 
                     ToUpValueBody();
-                    backGround[xHead - 1, yHead] = 2;
+                    GameSettings.BackGroundField[xHead - 1, yHead] = 2;
                 }
                
             }
@@ -233,7 +212,7 @@ namespace SnackeLastChance
             else if (down)
             { 
 
-                if (backGround[xHead + 1, yHead] > 0) alive = false;
+                if (GameSettings.BackGroundField[xHead + 1, yHead] > 0) alive = false;
                 else
                 {
                     if (ToCheckMaxValue() > counter)
@@ -242,13 +221,13 @@ namespace SnackeLastChance
                     }
 
                     ToUpValueBody();
-                    backGround[xHead + 1, yHead] = 2;
+                    GameSettings.BackGroundField[xHead + 1, yHead] = 2;
                 }
             }
 
             else if (right)
             {
-                if (backGround[xHead, yHead + 1] > 0) alive = false;
+                if (GameSettings.BackGroundField[xHead, yHead + 1] > 0) alive = false;
                 else
                 {
                     if (ToCheckMaxValue() > counter)
@@ -257,12 +236,12 @@ namespace SnackeLastChance
                     }
 
                     ToUpValueBody();
-                    backGround[xHead, yHead + 1] = 2;
+                    GameSettings.BackGroundField[xHead, yHead + 1] = 2;
                 }
             }
             else if (left)
             {
-                if (backGround[xHead, yHead - 1] > 0) alive = false;
+                if (GameSettings.BackGroundField[xHead, yHead - 1] > 0) alive = false;
                 else
                 {
                     if (ToCheckMaxValue() > counter)
@@ -271,7 +250,7 @@ namespace SnackeLastChance
                     }
 
                     ToUpValueBody();
-                    backGround[xHead, yHead - 1] = 2;
+                    GameSettings.BackGroundField[xHead, yHead - 1] = 2;
                 }
             }
         }
