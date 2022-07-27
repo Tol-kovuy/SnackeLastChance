@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SnackeLastChance
 {
-    public class GameCore
+    public class GameCore : IGameCore
     {
         public void ToStartGame()
         {
