@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Snake;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,13 +10,17 @@ namespace SnackeLastChance
         public void ToStartGame()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Banner logo = new Banner(new Coordinate(0, 0));
+            Console.WriteLine();
+            Console.WriteLine("Press any key to play the game...");
+            Console.ResetColor();
 
             while (Snake.Alive)
             {
+                ToReadKey();
                 Snake.ToMoveSnake();
                 FructFactory.ToCreateTheFruict();
                 Teacher.ToDrawBrickInTheWall();
-                ToReadKey();
             }
         }
         private void ToReadKey()
